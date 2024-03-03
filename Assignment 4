@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Assignment
+{
+    class userinput
+    {
+        static void Main(string[] args)
+        {
+        Console.WriteLine("Enter the number of rows for the matrices:");
+ int rows =Convert.ToInt32(Console.ReadLine());
+       Console.WriteLine("Enter the number of columns for the matrices :");
+int columns=Convert.ToInt32(Console.ReadLine ());
+int[,] matrix1 = new int [rows,columns];
+int[,] matrix2 = new int [rows,columns];
+int[,] resultmatrix = new int[rows,columns];
+       Console.WriteLine("Enter the elements of the first matrix:");
+       ReadMatrix (matrix1);
+       Console.WriteLine ("Enter the elements of the second matrix");
+       ReadMatrix (matrix2 );
+       Console.WriteLine ("The sum of two matrices is :");
+ AddMatrices(matrix1 ,matrix2 ,resultmatrix);
+ printMatrix (resultmatrix);
+       }
+       static void ReadMatrix(int[,]matrix )
+       {
+       for (int s=0; s< matrix.GetLength(0);s++)
+       {
+       for  (int t=0; t< matrix.GetLength(1);t++ )
+       {
+    Console.Write($"Enter element [{s+1},{t+1}]");
+    matrix [s,t]= Convert.ToInt32(Console.ReadLine ());
+    }
+   }
+ }
+    static void AddMatrices(int [,]matrix1,int [,]matrix2 ,int[,]resultMatrix)
+    {
+        for (int s=0; s<matrix1.GetLength (0);s++)
+        {
+            for(int t=0;t<matrix1.GetLength (1);t++)
+            {
+     resultMatrix[s,t]= matrix1[s,t]+ matrix2 [s,t];
+            }
+        }
+    }
+     static void printMatrix (int[,]matrix) 
+     {
+         for (int s=0;s<matrix.GetLength (0);s++)
+         {
+             for (int t=0;t<matrix.GetLength  (0);t++)
+             {
+               Console.Write(matrix [s,t]+"");
+               }
+               Console.WriteLine ();
+             }
+         }
+     }
+ }     
+       
+       
+            
+
