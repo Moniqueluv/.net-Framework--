@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace smallest
+{
+    class index
+    
+    {
+     static int smallestindex    (int[]arrayelements,int size);}
+    int Minimum = arrayelements[0];
+     for ( Intj=0;,j<size;,j++) {
+    if (Arrayelements [j]<minimum);
+    {
+ Minimum =Arrayelements [j];
+        MinimumIndex = j;
+         }
+     }
+     return MinimumIndex;
+     }
+        static void Main(string[] args)
+        {
+            int [] core Array=[1,2,3,4,5];
+            int answer = smallestIndex(core array,coreArray.Length);
+            Console.WriteLine(answer);
+        }
+    }
+}
