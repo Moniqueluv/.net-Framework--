@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace assignment
+{
+    class output
+    {
+        static void Main(string[] args)
+        {
+        Console.WriteLine("Enter a string :");
+        string input=Console.ReadLine();
+        string output =input.ToUpper ();
+        Console.WriteLine("String in capital letters:" + output );
+
+        }
+    }
+}
